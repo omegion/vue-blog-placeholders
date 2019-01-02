@@ -50,7 +50,7 @@ Vue.use(VueBlogPlaceholders)
 
 ```html
 <content-placeholders :rounded="15">
-    <content-placeholders-img :height="11"/>
+    <content-placeholders-img :height="12"/>
 </content-placeholders>
 <content-placeholders :centered="true">
     <content-placeholders-text :lines="3" :thickness="25"/>

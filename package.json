@@ -1,6 +1,6 @@
 {
   "name": "vue-blog-placeholders",
-  "description": "Vue Components for rendering animated content placeholders like facebook",
+  "description": "Animated content placeholders Vue Components for your blog",
   "version": "0.1.0",
   "author": "Hakan Kurtulus (http://github.com/omegion)",
   "keywords": [

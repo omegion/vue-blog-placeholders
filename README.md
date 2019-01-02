@@ -24,7 +24,7 @@ import VueBlogPlaceholders from 'vue-blog-placeholders'
 Vue.use(VueBlogPlaceholders)
 ```
 
-> ⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.
+> A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.
 
 ### Examples:
 

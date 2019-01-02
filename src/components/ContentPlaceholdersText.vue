@@ -1,6 +1,6 @@
 <template>
   <div :class="MainClassObject">
-    <div v-for="n in lines" :key="n" :class="classObject" />
+    <div v-for="n in lines" :key="n" :class="classObject"/>
   </div>
 </template>
 

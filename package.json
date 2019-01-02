@@ -1,7 +1,7 @@
 {
   "name": "vue-blog-placeholders",
   "description": "Animated content placeholders Vue Components for your blog",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Hakan Kurtulus (http://github.com/omegion)",
   "keywords": [
     "vue",

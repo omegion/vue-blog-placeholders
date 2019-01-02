@@ -5,7 +5,7 @@
 
 > Vue plugin package for a placeholder of your content to a demonstration before content loads.
 
-![example](https://i.imgur.com/C9gGu7D.gifv)
+![example](https://i.imgur.com/C9gGu7D.gif)
 
 ---
 
@@ -35,7 +35,7 @@ Vue.use(VueBlogPlaceholders)
 </content-placeholders>
 ```
 
-![rendered example](https://i.imgur.com/mbC5227.gifv)
+![rendered example](https://i.imgur.com/mbC5227.gif)
 
 ```html
 <content-placeholders>
@@ -46,7 +46,7 @@ Vue.use(VueBlogPlaceholders)
 </content-placeholders>
 ```
 
-![rendered example](https://i.imgur.com/bcYYkU8.gifv)
+![rendered example](https://i.imgur.com/bcYYkU8.gif)
 
 ```html
 <content-placeholders :rounded="15">
@@ -57,7 +57,7 @@ Vue.use(VueBlogPlaceholders)
 </content-placeholders>
 ```
 
-![rendered example](https://i.imgur.com/C9gGu7D.gifv)
+![rendered example](https://i.imgur.com/C9gGu7D.gif)
 
 ```html
 <content-placeholders>
@@ -65,7 +65,7 @@ Vue.use(VueBlogPlaceholders)
 </content-placeholders>
 ```
 
-![rendered example](https://i.imgur.com/Q6TmhPx.gifv)
+![rendered example](https://i.imgur.com/Q6TmhPx.gif)
 
 ### Available components and properties
 

@@ -1,28 +1,27 @@
 # vue-blog-placeholders
 
-![npm](https://img.shields.io/npm/v/vue-blog-placeholders.svg)
+![npm](https://img.shields.io/npm/v/npm.svg)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
-> Vue addon for rendering fake content while data is fetching to provide better UX and lower bounce rate.
+> Vue plugin package for a placeholder of your content to a demonstration before content loads.
 
-![example](https://i.imgur.com/JQlFjsS.gif)
+![example](https://i.imgur.com/C9gGu7D.gifv)
 
 ---
 
-## :cd: Installation
+## Installation
 
 * via npm: `npm install vue-blog-placeholders --save`
-* via yarn: `yarn add vue-blog-placeholders`
 
-## :rocket: Usage
+## Usage
 
-Include plugin in your `main.js` file.
+Include plugin in your `app.js` file.
 
 ```javascript
 import Vue from 'vue'
-import VueContentPlaceholders from 'vue-blog-placeholders'
+import VueBlogPlaceholders from 'vue-blog-placeholders'
 
-Vue.use(VueContentPlaceholders)
+Vue.use(VueBlogPlaceholders)
 ```
 
 > ⚠️ A css file is included when importing the package. You may have to setup your bundler to embed the css in your page.
@@ -31,29 +30,50 @@ Vue.use(VueContentPlaceholders)
 
 ```html
 <content-placeholders>
-  <content-placeholders-heading :img="true" />
-  <content-placeholders-text :lines="3" />
-</content-placeholders>
-```
-
-![rendered example](https://i.imgur.com/LWfqxUe.png)
-
-```html
-<content-placeholders :rounded="true">
-  <content-placeholders-img />
+  <content-placeholders-img :height="14"/>
   <content-placeholders-heading />
 </content-placeholders>
 ```
 
-![rendered example](https://i.imgur.com/NBb6ZB7.png)
+![rendered example](https://i.imgur.com/mbC5227.gifv)
+
+```html
+<content-placeholders>
+    <content-placeholders-list-item :items="3">
+        <content-placeholders-img :height="5"/>
+        <content-placeholders-text :lines="2"/>
+    </content-placeholders-list-item>
+</content-placeholders>
+```
+
+![rendered example](https://i.imgur.com/bcYYkU8.gifv)
+
+```html
+<content-placeholders :rounded="15">
+    <content-placeholders-img :height="11"/>
+</content-placeholders>
+<content-placeholders :centered="true">
+    <content-placeholders-text :lines="3" :thickness="25"/>
+</content-placeholders>
+```
+
+![rendered example](https://i.imgur.com/C9gGu7D.gifv)
+
+```html
+<content-placeholders>
+  <content-placeholders-text :lines="6" :thickness="30"/>
+</content-placeholders>
+```
+
+![rendered example](https://i.imgur.com/Q6TmhPx.gifv)
 
 ### Available components and properties
 
-* root `<content-placeholders>`
+* wrap component `<content-placeholders>`
   * Boolean `animated` (default: true)
-  * Boolean `rounded` (default: false) - border radius
+  * Boolean `rounded` (default: 10px) - border radius in px
   * Boolean `centered` (default: false)
-  > these properties define how all children components will act
+  > these properties will effect the inner components
 
 
 * `<content-placeholders-heading />`
@@ -62,12 +82,18 @@ Vue.use(VueContentPlaceholders)
 
 * `<content-placeholders-text />`
   * Number `lines` (default: 4)
+  * Number `thickness` (default: 15) - in px
+  * Boolean `center` (default: false)
 
 
 * `<content-placeholders-img />`
+  * Number `height` (default: 2) - in em
+
+* `<content-placeholders-list-item />`
+  * Number `items` (default: 4)
 
 ---
 
-## 🔓 License
+## License
 
-See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT).
+See the [LICENSE](LICENSE.md) file for license rights and limitations (MIT). This package inspired by [vue-content-placeholders](https://github.com/michalsnik/vue-content-placeholders).

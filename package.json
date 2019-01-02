@@ -8,12 +8,10 @@
     "vuejs",
     "plugin",
     "loader",
-    "fake",
-    "placeholder",
-    "progressive",
-    "skeleton-ui"
+    "content",
+    "placeholder"
   ],
-  "license": "MIT",
+  "license": "",
   "main": "dist/vue-blog-placeholders.common.js",
   "unpkg": "dist/vue-blog-placeholders.browser.js",
   "module": "index.js",
@@ -27,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/michalsnik/vue-blog-placeholders.git"
+    "url": "git+https://github.com/omegion/vue-blog-placeholders.git"
   },
   "bugs": {
-    "url": "https://github.com/michalsnik/vue-blog-placeholders/issues"
+    "url": "https://github.com/omegion/vue-blog-placeholders/issues"
   },
-  "homepage": "https://github.com/michalsnik/vue-blog-placeholders#readme",
+  "homepage": "https://github.com/omegion/vue-blog-placeholders#readme",
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^7.1.1",

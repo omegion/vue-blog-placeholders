@@ -19,7 +19,7 @@ export default {
   props: {
     items: {
       type: Number,
-      default: 3,
+      default: 4,
     },
   },
 }

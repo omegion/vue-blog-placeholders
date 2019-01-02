@@ -4,7 +4,7 @@ var base = require('./webpack.config.base')
 var path = require('path')
 
 var outputFile = 'vue-blog-placeholders'
-var globalName = 'VueContentPlaceholders'
+var globalName = 'VueBlogPlaceholders'
 
 module.exports = merge(base, {
   output: {

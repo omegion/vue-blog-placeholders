@@ -8,7 +8,7 @@ $vue-blog-placeholders-spacing: 10px !default;
 
 
 // Animations
-@keyframes vueContentPlaceholdersAnimation {
+@keyframes VueBlogPlaceholdersAnimation {
   0% {
     transform: translate3d(-30%, 0, 0);
   }
@@ -56,7 +56,7 @@ $vue-blog-placeholders-spacing: 10px !default;
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
-    animation-name: vueContentPlaceholdersAnimation;
+    animation-name: VueBlogPlaceholdersAnimation;
     animation-timing-function: linear;
   }
 }

@@ -1,0 +1,175 @@
+// Variables
+$vue-blog-placeholders-primary-color: #ccc !default;
+$vue-blog-placeholders-secondary-color: #eee !default;
+$vue-blog-placeholders-border-radius: 6px !default;
+$vue-blog-placeholders-line-height: 15px !default;
+$vue-blog-placeholders-spacing: 10px !default;
+
+
+
+// Animations
+@keyframes vueContentPlaceholdersAnimation {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+
+
+// Mixins
+@mixin vue-blog-placeholders-rounded {
+  @for $i from 1 through 20 {
+    &-#{$i} div{
+      border-radius: $i + px
+    }
+  }
+}
+
+@mixin vue-blog-placeholders {
+  position: relative;
+  overflow: hidden;
+  height: $vue-blog-placeholders-line-height;
+  background: $vue-blog-placeholders-secondary-color;
+
+  // .vue-blog-placeholders-is-rounded &  {
+  //   border-radius: $vue-blog-placeholders-border-radius;
+  // }
+
+  .vue-blog-placeholders-is-centered & {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .vue-blog-placeholders-is-animated &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    max-width: 1000px;
+    height: 100%;
+    background: linear-gradient(to right, transparent 0%, darken($vue-blog-placeholders-secondary-color, 5%) 15%, transparent 30%);
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: vueContentPlaceholdersAnimation;
+    animation-timing-function: linear;
+  }
+}
+
+@mixin vue-blog-placeholders-spacing {
+  [class^="vue-blog-placeholders-"] + & {
+    margin-top: 2 * $vue-blog-placeholders-spacing;
+  }
+}
+
+@mixin vue-blog-placeholders-height {
+  @for $i from 1 through 50 {
+    &-#{$i} {
+      height: $i + em
+    }
+  }
+}
+
+@mixin vue-blog-placeholders-thickness {
+  @for $i from 1 through 30 {
+    &-#{$i}  .vue-blog-placeholders-text__line {
+      height: $i + px
+    }
+  }
+}
+
+
+// Styles
+.vue-blog-placeholders-heading {
+  @include vue-blog-placeholders-spacing;
+  display: flex;
+
+  &__img {
+    @include vue-blog-placeholders;
+    width: 2 * $vue-blog-placeholders-line-height + 3 * $vue-blog-placeholders-spacing;
+    height: 2 * $vue-blog-placeholders-line-height + 3 * $vue-blog-placeholders-spacing;
+    margin-right: 1.5 * $vue-blog-placeholders-spacing;
+  }
+
+  &__content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  &__title {
+    @include vue-blog-placeholders;
+    width: 85%;
+    margin-bottom: $vue-blog-placeholders-spacing;
+    background: $vue-blog-placeholders-primary-color;
+  }
+
+  &__subtitle {
+    @include vue-blog-placeholders;
+    width: 90%;
+  }
+}
+
+.vue-blog-placeholders-text {
+  @include vue-blog-placeholders-spacing;
+
+  &__line {
+    @include vue-blog-placeholders;
+    width: 100%;
+    margin-bottom: $vue-blog-placeholders-spacing;
+
+    &:nth-child(4n + 1) {
+      width: 80%;
+    }
+
+    &:nth-child(4n + 2) {
+      width: 100%;
+    }
+
+    &:nth-child(4n + 3) {
+      width: 70%;
+    }
+
+    &:nth-child(4n + 4) {
+      width: 85%;
+    }
+  }
+}
+
+.vue-blog-placeholders-img {
+  @include vue-blog-placeholders;
+  @include vue-blog-placeholders-spacing;
+  width: 100%;
+  height: 120px;
+}
+
+.vue-blog-placeholders-height {
+  @include vue-blog-placeholders-height;
+}
+
+.vue-blog-placeholders-thickness {
+  @include vue-blog-placeholders-thickness;
+}
+
+.vue-blog-placeholders-rounded {
+  @include vue-blog-placeholders-rounded;
+}
+
+.vue-blog-placeholders-list-item {
+  display: flex;
+  margin-bottom: 20px;
+
+  & .vue-blog-placeholders-img {
+    width: 25%;
+  }
+  & .vue-blog-placeholders-text {
+    width: 75%;
+    margin-left: 20px;
+  }
+}

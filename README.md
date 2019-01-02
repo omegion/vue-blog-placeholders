@@ -1,6 +1,6 @@
 # vue-blog-placeholders
 
-![npm](https://img.shields.io/npm/v/npm.svg)
+![npm](https://img.shields.io/npm/v/vue-blog-placeholders.svg)
 [![vue2](https://img.shields.io/badge/vue-2.x-brightgreen.svg)](https://vuejs.org/)
 
 > Vue plugin package for a placeholder of your content to a demonstration before content loads.

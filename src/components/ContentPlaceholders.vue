@@ -1,6 +1,6 @@
 <template>
-  <div :class="classObject">
-    <slot />
+  <div :class="classObject" :style="styleObject">
+    <slot/>
   </div>
 </template>
 
@@ -16,6 +16,12 @@ export default {
         'vue-blog-placeholders-is-animated': this.animated,
       }
     },
+    styleObject () {
+      return {
+        '--gradient': this.gradientColor,
+        '--background': this.backgroundColor,
+      }
+    },
   },
   props: {
     rounded: {
@@ -29,6 +35,14 @@ export default {
     animated: {
       type: Boolean,
       default: true,
+    },
+    gradientColor: {
+      type: String,
+      default: '#ccc',
+    },
+    backgroundColor: {
+      type: String,
+      default: '#eee',
     },
   },
 }

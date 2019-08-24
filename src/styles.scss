@@ -1,11 +1,6 @@
 // Variables
-$vue-blog-placeholders-primary-color: #ccc !default;
-$vue-blog-placeholders-secondary-color: #eee !default;
-$vue-blog-placeholders-border-radius: 6px !default;
 $vue-blog-placeholders-line-height: 15px !default;
 $vue-blog-placeholders-spacing: 10px !default;
-
-
 
 // Animations
 @keyframes VueBlogPlaceholdersAnimation {
@@ -17,8 +12,6 @@ $vue-blog-placeholders-spacing: 10px !default;
     transform: translate3d(100%, 0, 0);
   }
 }
-
-
 
 // Mixins
 @mixin vue-blog-placeholders-rounded {
@@ -33,11 +26,7 @@ $vue-blog-placeholders-spacing: 10px !default;
   position: relative;
   overflow: hidden;
   height: $vue-blog-placeholders-line-height;
-  background: $vue-blog-placeholders-secondary-color;
-
-  // .vue-blog-placeholders-is-rounded &  {
-  //   border-radius: $vue-blog-placeholders-border-radius;
-  // }
+  background: var(--background);
 
   .vue-blog-placeholders-is-centered & {
     margin-left: auto;
@@ -52,7 +41,7 @@ $vue-blog-placeholders-spacing: 10px !default;
     width: 100vw;
     max-width: 1000px;
     height: 100%;
-    background: linear-gradient(to right, transparent 0%, darken($vue-blog-placeholders-secondary-color, 5%) 15%, transparent 30%);
+    background: linear-gradient(to right, transparent 0%, var(--gradient) 15%, transparent 30%);
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
@@ -76,7 +65,7 @@ $vue-blog-placeholders-spacing: 10px !default;
 }
 
 @mixin vue-blog-placeholders-thickness {
-  @for $i from 1 through 30 {
+  @for $i from 1 through 60 {
     &-#{$i}  .vue-blog-placeholders-text__line {
       height: $i + px
     }
@@ -107,7 +96,8 @@ $vue-blog-placeholders-spacing: 10px !default;
     @include vue-blog-placeholders;
     width: 85%;
     margin-bottom: $vue-blog-placeholders-spacing;
-    background: $vue-blog-placeholders-primary-color;
+    background: var(--background);
+    filter: brightness(0.92);
   }
 
   &__subtitle {

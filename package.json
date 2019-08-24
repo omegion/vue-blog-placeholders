@@ -1,7 +1,7 @@
 {
   "name": "vue-blog-placeholders",
   "description": "Animated content placeholders Vue Components for your blog",
-  "version": "0.1.1",
+  "version": "0.1.4",
   "author": "Hakan Kurtulus (http://github.com/omegion)",
   "keywords": [
     "vue",
@@ -37,8 +37,8 @@
     "babel-loader": "^6.0.0",
     "babel-preset-env": "^1.6.1",
     "cross-env": "^3.1.3",
-    "css-loader": "^0.26.1",
-    "eslint": "^3.12.1",
+    "css-loader": "^1.0.0",
+    "eslint": "^4.18.2",
     "eslint-config-standard": "^6.2.1",
     "eslint-loader": "^1.6.1",
     "eslint-plugin-html": "^1.6.0",

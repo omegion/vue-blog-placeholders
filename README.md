@@ -73,6 +73,8 @@ Vue.use(VueBlogPlaceholders)
   * Boolean `animated` (default: true)
   * Boolean `rounded` (default: 10px) - border radius in px
   * Boolean `centered` (default: false)
+  * String `gradient-color` (default: #ccc)
+  * String `background-color` (default: #eee)
   > these properties will effect the inner components
 
 
